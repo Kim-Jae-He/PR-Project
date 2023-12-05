@@ -1,0 +1,175 @@
+리액트에서 라우팅(경로에 따라서 알맞은 페이지를 보여주는 방법)
+  1. react-router-dom 라이브러리 
+  2. next.js 프레임워크 를 사용하는 방법 
+
+next js 
+  리액트를 활용하여 만든 프레임워크
+  라우팅까지 자동으로 될 수 있도록 
+
+리액트
+  SPA + CSR(Client Side Rendering)
+    html파일은 하나밖에 없기 때문에 페이지 별 서로 다른 
+    meta 태그를 설정할 수 없고, 
+    검색 했을 때 노출이 쉽게 되지 않는 단점이 존재(SEO에 불리하다)
+  
+넥스트js 
+  기존 react + 라우팅기능 + SSR(Server Side Rendering) 
+  SEO에 최적화가 가능, 라우팅도 쉽게 다룰 수 있다
+
+app 폴더 내의 layout.js가 그려지고, 
+비어있는 body태그 안에 page.js 에서 export default 되고 있는 컴포넌트가 그려진다 
+
+app 폴더 내에 다른 폴더를 만들고, 
+그 폴더 안에 page.js 를 만들면 자동으로 라우팅 처리가 된다 
+http://localhost:3000/abc 
+  입력을 하면 
+app/abc/page.js 파일에서 export default 되고있는 컴포넌트가 layout의 body 안쪽에 
+그려진다 
+
+
+1. 라이브러리 bsy 를 설치하고 싶다 
+npm 
+  npm install bsy
+yarn 
+  yarn add bsy 
+
+2. 라이브러리 bsy를 삭제하고 싶다 
+npm 
+  npm uninstall bsy
+
+yarn 
+  yarn remove bsy 
+
+
+3. node-modules 폴더가 없어서 설치하고 싶다 
+npm 
+  npm install
+    --> package.json에 dependencies를 보고 거기 있는 라이브러리를 모두 설치
+
+yarn 
+  yarn install 
+    --> package.json에 dependencies를 보고 거기 있는 라이브러리를 모두 설치
+
+yarn은 npm을 통해서 설치해야한다 
+
+npm install yarn --> 로컬영역에서만 설치 
+npm install --global yarn --> 전체 영역에서 yarn을 사용하겠다 
+
+
+nextjs 기본 프로젝트 구조 설치 
+npm 
+  npx create-next-app 
+    npm 5.2버전 부터 npx를제공, 기존방식은 npm을 통해 사용할 모듈을 
+    지역 공간에 설치를 해야만 실행시킬수 있었는데, 
+    모듈을 설치하지 않고도 매번 최신 버전 파일만 불러와서 실행시키고, 
+    그 파일은 사라지는 방식으로 사용할 수 있도록 npx가 제공된다 .
+
+
+yarn 
+  yarn create next-app
+
+
+넥스트js 프로젝트 서버 실행 
+npm 
+  npm run dev 
+yarn 
+  yarn run dev 
+  혹은 
+  yarn dev 
+
+
+test 리액트 프로젝트 
+  간단한 구조로 연습 
+  +npm으로 설치 
+
+dashboard 넥스트 프로젝트 
+  적용, 
+  yarn 으로 설치 
+
+
+
+포트번호 
+  실행되고있는 컴퓨터의 프로그램을 식별하기 위해 사용하는 번호 
+
+  localhost = 127.0.0.1
+  localhost:3000 --> 127.0.0.1:3000 --> 컴퓨터주소:3000
+
+  카카오톡, zoom, 필기프로그램, vscode .....
+  8080 포트에서 data base 프로그램 
+
+  기본적으로 react 프로젝트나 nextjs 프로젝트는 3000번에서 동작하도록 설정 
+  하나의 포트에서는 하나의 프로그램 
+
+react를 기본 포트인 3000번이 아닌 다른 포트에서 동작시키기 
+  package.json에서 
+  scripts 부분에 
+  mac, linux 
+    "start" : "export PORT=포트번호 && react-scripts start"
+  window 
+    "start" : "set PORT=포트번호 && react-scripts start"
+
+  --> npm start를 통해 react 프로젝트를 실행하면 
+  설정된 포트에서 실행이 된다 
+
+리액트 프로젝트 
+  npm start
+  yarn start 
+  로 실행
+넥스트 프로젝트 
+  yarn dev 
+  npm run dev 
+
+
+css 문법 
+선택자 
+div:hover{
+  color:red;
+} 
+
+// 가상클래스 --> 
+:root {
+  //html태그에 적용하고 싶은
+  // 대상이 있을 때 사용
+}
+
+css에서 변수 
+글자색 
+a =  #000000
+b = #ffffff 
+
+h1{
+  color:a;
+}
+
+h2{
+  color:a;
+}
+
+.detail{
+  color:a;
+}
+
+.content{
+  background-color:b
+}
+
+
+css에서 변수 만들기 
+  --변수이름 : 값;
+  --변수이름 : 값;
+  --a : #000000;
+  --b : 0, 0, 0;
+  --c : 3px solid black;
+  --d : 배상엽;
+
+css에서 변수 사용하기 
+  var(--변수이름)
+
+div{
+  color : var(--a);
+  border : var(--c);
+  display: var(--d);
+
+  background-color : rgb(0, 0, 0);
+  background-color : rgba(var(--b), 0.5);
+}
