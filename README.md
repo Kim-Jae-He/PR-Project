@@ -7,7 +7,7 @@
 
 
 ## 🎈개발환경
-![Alt text](![image](https://github.com/Kim-Jae-He/PR-Project/assets/135501169/252458ef-a5ec-4563-90b7-c1530df97f5d))
+![c취소](https://github.com/Kim-Jae-He/PR-Project/assets/135501169/95290dc5-f6f7-4c16-988f-f16afc9887f0)
 
 
 # 🗂️ 주요기능
