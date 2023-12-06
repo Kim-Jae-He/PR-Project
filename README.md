@@ -7,8 +7,8 @@
 
 
 ## 🎈개발환경
-<hr>
-![image](https://github.com/Kim-Jae-He/PR-Project/assets/135501169/252458ef-a5ec-4563-90b7-c1530df97f5d)
+![Alt text](![image](https://github.com/Kim-Jae-He/PR-Project/assets/135501169/252458ef-a5ec-4563-90b7-c1530df97f5d))
+
 
 # 🗂️ 주요기능
 * 로그인
